@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Silva | Portfolio</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid #334155;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        p.subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-top: 0;
+        }
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 2.5rem 0;
+        }
+        h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #334155;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .tag {
+            background: #0284c7;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 2rem 0;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Erick Silva</h1>
+            <p class="subtitle">Biochemistry | Kinetic Modeling & Laboratory Analysis</p>
+            <div class="links">
+                <a href="https://github.com/rusosilva22" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/erick-silva-815038218" target="_blank">LinkedIn</a>
+                <a href="mailto:e.silva.biochem@gmail.com">Email</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Biochemistry graduate with experience in laboratory techniques, molecular analysis, and kinetic modeling. 
+                Interested in biotechnology, quality assurance, and computational analysis.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical & Laboratory Skills</h2>
+            <div class="card">
+                <h3>Laboratory Techniques</h3>
+                <div class="tags">
+                    <span class="tag">Sterile Technique</span>
+                    <span class="tag">Thermocyclers / PCR</span>
+                    <span class="tag">Gel Documentation</span>
+                    <span class="tag">PPE & Lab Safety</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Computational & Software</h3>
+                <div class="tags">
+                    <span class="tag">MATLAB</span>
+                    <span class="tag">Kinetic Modeling</span>
+                    <span class="tag">Git & GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card">
+                <h3>Enzyme Kinetics Simulation (MATLAB)</h3>
+                <p>Calculates and models zero-order and first-order Michaelis-Menten enzyme reaction rates and substrate consumption over time.</p>
+                <div class="tags">
+                    <span class="tag">MATLAB</span>
+                    <span class="tag">ode45</span>
+                    <span class="tag">Biochemistry</span>
+                </div>
+                <p><a href="https://github.com/rusosilva22/Enzyme-Kinetics" style="color: var(--accent);" target="_blank">View Repository →</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Erick Silva. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
