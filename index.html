@@ -4,95 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erick Silva | Portfolio</title>
+    <!-- Import Oswald font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg: #333333;
-            --card-bg: #808080;
-            --accent: #333333;
-            --text: #FFFFFF;
-            --text-muted: #FFFFFF;
+        --bg: #1e1e1e;           /* Darkish grey background */
+        --card-bg: #2d2d2d;      /* Slightly lighter dark grey for card boxes */
+        --border-color: #3f3f46;  /* Neutral border color */
+        --accent: #e4e4e7;        /* Very light grey for subtitles/accents */
+        --accent-hover: #ffffff;  /* Pure white on hover */
+        --text-heading: #ffffff;  /* Pure white for titles and main headings */
+        --text-body: #ffffff;     /* Pure white for general text */
+        --text-muted: #a1a1aa;    /* Soft muted grey for footer/secondary details */
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-body);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem;
+            text-align: left; /* Left align everything */
         }
+
+        /* Header Styling */
         header {
-            text-align: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid #334155;
+            text-align: left;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
         }
+
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text);
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-heading);
+            margin: 0 0 0.5rem 0;
         }
+
         p.subtitle {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--accent);
-            margin-top: 0;
-        }
-        .links a {
-            color: var(--accent);
-            text-decoration: none;
-            margin: 0 10px;
+            margin: 0 0 1.2rem 0;
             font-weight: 500;
         }
-        .links a:hover {
-            text-decoration: underline;
+
+        .links {
+            display: flex;
+            gap: 1.2rem;
         }
+
+        .links a {
+            color: var(--text-heading);
+            background-color: #21262d;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Section Headers */
         section {
             margin: 2.5rem 0;
         }
+
         h2 {
-            color: var(--accent);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--text-heading);
             border-bottom: 2px solid var(--accent);
             display: inline-block;
             padding-bottom: 4px;
+            margin-bottom: 1.5rem;
         }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+        }
+
+        /* Card Container Styling */
         .card {
             background-color: var(--card-bg);
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 1.5rem;
-            border: 1px solid #334155;
+            border: 1px solid var(--border-color);
         }
+
         .card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+            color: var(--text-heading);
             margin-top: 0;
+            margin-bottom: 0.8rem;
         }
+
+        /* Clickable Tags */
         .tags {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             flex-wrap: wrap;
             margin-top: 1rem;
         }
-        .tag {
-            background: #0284c7;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.85rem;
+
+        .tag-link {
+            text-decoration: none;
         }
+
+        .tag {
+            background-color: #1f2937;
+            color: var(--accent);
+            border: 1px solid #374151;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .tag-link:hover .tag {
+            background-color: var(--accent);
+            color: #0f172a;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Links in Projects */
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
         footer {
-            text-align: center;
+            text-align: left;
             color: var(--text-muted);
             font-size: 0.9rem;
-            padding: 2rem 0;
-            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- Header / Main Title Block -->
         <header>
             <h1>Erick Silva</h1>
             <p class="subtitle">Biochemistry | Kinetic Modeling & Laboratory Analysis</p>
@@ -103,6 +196,7 @@
             </div>
         </header>
 
+        <!-- About Me Section -->
         <section id="about">
             <h2>About Me</h2>
             <p>
@@ -111,38 +205,46 @@
             </p>
         </section>
 
+        <!-- Technical & Laboratory Skills Section -->
         <section id="skills">
             <h2>Technical & Laboratory Skills</h2>
+            
             <div class="card">
                 <h3>Laboratory Techniques</h3>
                 <div class="tags">
-                    <span class="tag">Sterile Technique</span>
-                    <span class="tag">Thermocyclers / PCR</span>
-                    <span class="tag">Gel Documentation</span>
-                    <span class="tag">PPE & Lab Safety</span>
+                    <!-- Replace href="#" with your image link or subpage link when ready -->
+                    <a href="#" class="tag-link"><span class="tag">Sterile Technique</span></a>
+                    <a href="#" class="tag-link"><span class="tag">Thermocyclers / PCR</span></a>
+                    <a href="#" class="tag-link"><span class="tag">Gel Documentation</span></a>
+                    <a href="#" class="tag-link"><span class="tag">PPE & Lab Safety</span></a>
                 </div>
             </div>
+
             <div class="card">
                 <h3>Computational & Software</h3>
                 <div class="tags">
-                    <span class="tag">MATLAB</span>
-                    <span class="tag">Kinetic Modeling</span>
-                    <span class="tag">Git & GitHub</span>
+                    <a href="#" class="tag-link"><span class="tag">MATLAB</span></a>
+                    <a href="#" class="tag-link"><span class="tag">Kinetic Modeling</span></a>
+                    <a href="#" class="tag-link"><span class="tag">Git & GitHub</span></a>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
+            
             <div class="card">
                 <h3>Enzyme Kinetics Simulation (MATLAB)</h3>
-                <p>Calculates and models zero-order and first-order Michaelis-Menten enzyme reaction rates and substrate consumption over time.</p>
+                <p>Calculates and models zero-order and first-order Michaelis-Menten enzyme reaction rates and substrate consumption over time using ODE solvers.</p>
                 <div class="tags">
-                    <span class="tag">MATLAB</span>
-                    <span class="tag">ode45</span>
-                    <span class="tag">Biochemistry</span>
+                    <a href="#" class="tag-link"><span class="tag">MATLAB</span></a>
+                    <a href="#" class="tag-link"><span class="tag">ode45</span></a>
+                    <a href="#" class="tag-link"><span class="tag">Biochemistry</span></a>
                 </div>
-                <p><a href="https://github.com/rusosilva22/Enzyme-Kinetics" style="color: var(--accent);" target="_blank">View Repository →</a></p>
+                <div>
+                    <a href="https://github.com/rusosilva22/Enzyme-Kinetics" class="project-link" target="_blank">View Repository →</a>
+                </div>
             </div>
         </section>
 
